@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 function Square(props) {
-    console.log(props.isWinMove);
     let color;
     if (props.isWinMove) {
-        console.log("Is Win Move!");
         if (props.value === 'X')
             color = "orange";
         else if (props.value === 'O')
@@ -175,7 +173,6 @@ class Game extends React.Component {
         let winmove;
         if (winner) {
             winmove = current.delta;
-            console.log(current.delta);
         } else {
             winmove = undefined;
         }
